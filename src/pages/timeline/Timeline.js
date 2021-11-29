@@ -1,20 +1,23 @@
-import CircleLoader from "../loaders/CircleLoader";
-import { PageContainer, ContentContainer } from "../_shared/PageContainer";
-import { PageTitleContainer } from "../_shared/PageTitleContainer";
-import Header from "../Header/Header";
+import CircleLoader from "../../components/loaders/CircleLoader";
+import {
+    PageContainer,
+    ContentContainer,
+} from "../../components/_shared/PageContainer";
+import { PageTitleContainer } from "../../components/_shared/PageTitleContainer";
+import Header from "../../components/Header/Header";
 import PublishBox from "./PublishBox";
-import HashtagBox from "../HashtagBox/HashtagBox";
-import WarningParagraph from "../_shared/WarningParagraph";
+import HashtagBox from "../../components/HashtagBox/HashtagBox";
+import WarningParagraph from "../../components/_shared/WarningParagraph";
 import {
     FeedPostsContainer,
     forcedPageUpdate,
-} from "../_shared/FeedPostsContainer";
-import Search from "../Header/Search";
+} from "../../components/_shared/FeedPostsContainer";
+import Search from "../../components/Header/Search";
 import PagePostsContext from "../../contexts/PagePostsContext";
 import UserContext from "../../contexts/UserContext";
 import { useEffect, useContext, useState } from "react";
 import { useHistory } from "react-router-dom";
-import { getPosts, getFollows } from "../../API/requests";
+import { getPosts, getFollows } from "../../services/API/requests";
 import routes from "../../routes/routes";
 
 export default function Timeline() {

@@ -1,17 +1,19 @@
-import CircleLoader from "../loaders/CircleLoader";
-import { PageContainer, ContentContainer } from "../_shared/PageContainer";
-import Header from "../Header/Header";
-import { PageTitleContainer } from "../_shared/PageTitleContainer";
-import HashtagBox from "../HashtagBox/HashtagBox";
-import { getTrendingPosts } from "../../services/API/requests";
+import CircleLoader from "../../components/loaders/CircleLoader";
+import Header from "../../components/Header/Header";
+import {
+    PageContainer,
+    ContentContainer,
+} from "../../components/_shared/PageContainer";
+import { PageTitleContainer } from "../../components/_shared/PageTitleContainer";
+import HashtagBox from "../../components/HashtagBox/HashtagBox";
+import { getUserPosts } from "../../services/API/requests";
 import routes from "../../routes/routes";
 import UserContext from "../../contexts/UserContext";
-import { useState, useEffect, useContext } from "react";
-import { useParams, useHistory } from "react-router-dom";
-import { FeedPostsContainer } from "../_shared/FeedPostsContainer";
+import { useContext, useEffect, useState } from "react";
+import { useHistory } from "react-router-dom";
+import { FeedPostsContainer } from "../../components/_shared/FeedPostsContainer";
 
-export default function TrendingPage({ setPreviousPage }) {
-    const { HASHTAG } = useParams();
+export default function MyPosts({ setPreviousPage }) {
     const { loggedUser } = useContext(UserContext);
     const history = useHistory();
     const [loading, setLoading] = useState(true);
@@ -23,10 +25,6 @@ export default function TrendingPage({ setPreviousPage }) {
         setLoading(false);
     }, [loggedUser]);
 
-    useEffect(() => {
-        window.scrollTo(0, 0);
-    }, [HASHTAG]);
-
     return (
         <PageContainer>
             {loading ? (
@@ -37,13 +35,12 @@ export default function TrendingPage({ setPreviousPage }) {
 
                     <ContentContainer>
                         <PageTitleContainer>
-                            <h1>{`# ${HASHTAG}`}</h1>
+                            <h1>meus posts</h1>
                         </PageTitleContainer>
 
                         <FeedPostsContainer
-                            APIfunction={getTrendingPosts}
-                            settings={{ topic: HASHTAG }}
-                            key={HASHTAG}
+                            APIfunction={getUserPosts}
+                            settings={{ id: loggedUser.user.id }}
                         />
                     </ContentContainer>
 

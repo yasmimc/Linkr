@@ -27,7 +27,7 @@ import Snippet from "./Snippet";
 import Like from "./Like";
 import PostText from "./PostText";
 
-import { edit } from "../../API/requests";
+import { edit } from "../../services/API/requests";
 import UserContext from "../../contexts/UserContext";
 import PagePostsContext from "../../contexts/PagePostsContext";
 import MapModal from "./MapModal";

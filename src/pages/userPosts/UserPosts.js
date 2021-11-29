@@ -1,17 +1,20 @@
 import styled from "styled-components";
-import CircleLoader from "../loaders/CircleLoader";
-import { PageContainer, ContentContainer } from "../_shared/PageContainer";
-import Header from "../Header/Header";
-import { PageTitleContainer } from "../_shared/PageTitleContainer";
-import UserAvatar from "../_shared/UserAvatar";
+import CircleLoader from "../../components/loaders/CircleLoader";
+import {
+    PageContainer,
+    ContentContainer,
+} from "../../components/_shared/PageContainer";
+import Header from "../../components/Header/Header";
+import { PageTitleContainer } from "../../components/_shared/PageTitleContainer";
+import UserAvatar from "../../components/_shared/UserAvatar";
 import FollowButton from "./FollowButton";
-import HashtagBox from "../HashtagBox/HashtagBox";
-import { getUserData, getUserPosts } from "../../API/requests";
+import HashtagBox from "../../components/HashtagBox/HashtagBox";
+import { getUserData, getUserPosts } from "../../services/API/requests";
 import routes from "../../routes/routes";
 import UserContext from "../../contexts/UserContext";
 import { useContext, useEffect, useState } from "react";
 import { useParams, useHistory } from "react-router-dom";
-import { FeedPostsContainer } from "../_shared/FeedPostsContainer";
+import { FeedPostsContainer } from "../../components/_shared/FeedPostsContainer";
 
 export default function UserPosts({ setPreviousPage }) {
     const { loggedUser } = useContext(UserContext);

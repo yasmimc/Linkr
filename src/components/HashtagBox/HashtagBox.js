@@ -1,7 +1,7 @@
 import Hashtag from "./Hashtag";
 import CircleLoader from "../loaders/CircleLoader";
 import styled from "styled-components";
-import { getTrendingTopics } from "../../API/requests";
+import { getTrendingTopics } from "../../services/API/requests";
 import UserContext from "../../contexts/UserContext";
 import { useContext, useState, useEffect } from "react";
 import SearchHashtag from "./SearchHashtag";

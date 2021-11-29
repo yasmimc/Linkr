@@ -3,14 +3,14 @@ import UserAvatar from "../_shared/UserAvatar";
 import UserContext from "../../contexts/UserContext";
 import { useContext, useEffect, useRef, useState } from "react";
 import autosize from "autosize";
-import { getPostComments } from "../../API/requests";
+import { getPostComments } from "../../services/API/requests";
 import ThreeDotsLoader from "../loaders/ThreeDotsLoader";
 import Username from "../_shared/Username";
-import { comment } from "../../API/requests";
-import { getFollows } from "../../API/requests";
+import { comment } from "../../services/API/requests";
+import { getFollows } from "../../services/API/requests";
 import { FiSend } from "react-icons/fi";
 import ActionButton from "../_shared/buttons/ActionButton";
-import ConfirmModal from "../Modal/ConfirmModal";
+import ConfirmModal from "../modals/ConfirmModal";
 
 function Comment({ commentData, postOwner, followsList }) {
     const { text, user } = commentData;

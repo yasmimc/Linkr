@@ -2,8 +2,8 @@ import styled from "styled-components";
 import { useHistory } from "react-router-dom";
 import routes from "../../routes/routes";
 import { useState } from "react";
-import ConfirmModal from "../Modal/ConfirmModal";
-import ThemePreferencesModal from "../Modal/ThemePreferencesModal";
+import ConfirmModal from "../modals/ConfirmModal";
+import ThemePreferencesModal from "../modals/ThemePreferencesModal";
 
 export default function MenuOptions({ menuOpened }) {
     const history = useHistory();

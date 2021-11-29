@@ -71,7 +71,7 @@ export default function ConfirmModal({
 
 const CancelButton = styled(CustomButton)`
     background-color: rgb(225, 225, 225);
-    color: rgb(24, 119, 242);
+    color: ${(props) => props.theme.mode.font};
     @media (max-width: 400px) {
         font-size: 15px;
     }

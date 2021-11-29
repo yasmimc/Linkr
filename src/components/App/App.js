@@ -1,20 +1,20 @@
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 import routes from "../../routes/routes";
-import Login from "../Login/Login";
-import SignUp from "../SignUp/SignUp";
-import Timeline from "../Timeline/Timeline";
-import MyPosts from "../MyPosts/MyPosts";
+import SignUp from "../../pages/signUp/SignUp";
+import Timeline from "../../pages/timeline/Timeline";
+import MyPosts from "../../pages/myPosts/MyPosts";
 import TrendingPage from "../TrendingPage/TrendingPage";
-import UserPosts from "../UserPosts/UserPosts";
-import DeletingPostModal from "../Modal/DeletingPostModal";
+import UserPosts from "../../pages/userPosts/UserPosts";
+import DeletingPostModal from "../modals/DeletingPostModal";
 import UserContext from "../../contexts/UserContext";
 import PagePostsContext from "../../contexts/PagePostsContext";
 import { useState } from "react";
 import "../App/App.css";
-import MyLikes from "../MyLikes/MyLikes";
 import { GlobalStyle } from "./globalStyles";
 import { ThemeProvider } from "styled-components";
 import { darkTheme, lightTheme } from "./globalStyles";
+import Login from "../../pages/login/Login";
+import MyLikes from "../../pages/myLikes/MyLikes";
 
 function App() {
     const [loggedUser, setLoggedUser] = useState({

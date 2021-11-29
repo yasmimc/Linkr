@@ -1,5 +1,5 @@
 import ReactTooltip from "react-tooltip";
-import { likePost, dislikePost } from "../../API/requests";
+import { likePost, dislikePost } from "../../services/API/requests";
 import { useState, useEffect } from "react";
 import { AiOutlineHeart, AiFillHeart } from "react-icons/ai";
 import styled from "styled-components";

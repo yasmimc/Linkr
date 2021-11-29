@@ -1,13 +1,13 @@
-import HomeContainer from "../_shared/HomeContainer";
-import Cover from "../_shared/Cover";
-import ContentContainer from "../_shared/ContentContainer";
-import { CustomForm, CustomInput } from "../_shared/Inputs";
-import CustomButton from "../_shared/buttons/CustomButton";
-import CustomLink from "../_shared/CustomLink";
+import HomeContainer from "../../components/_shared/HomeContainer";
+import Cover from "../../components/_shared/Cover";
+import ContentContainer from "../../components/_shared/ContentContainer";
+import { CustomForm, CustomInput } from "../../components/_shared/Inputs";
+import CustomButton from "../../components/_shared/buttons/CustomButton";
+import CustomLink from "../../components/_shared/CustomLink";
 import { useState } from "react";
 import { useHistory } from "react-router-dom";
-import { signUp } from "../../API/requests";
-import statusCode from "../../API/statusCode";
+import { signUp } from "../../services/API/requests";
+import statusCode from "../../services/API/statusCode";
 import routes from "../../routes/routes";
 
 export default function SignUp() {
